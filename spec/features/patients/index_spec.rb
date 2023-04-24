@@ -12,7 +12,6 @@ RSpec.describe 'the Patients index page' do
       expect(page).to have_content('Patients')
       expect(@denny.name).to appear_before(@katie.name)
       expect(@katie.name).to appear_before(@rebecca.name)
-      save_and_open_page
     end
   end
 end
