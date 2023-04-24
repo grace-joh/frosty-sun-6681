@@ -14,12 +14,19 @@ RSpec.describe 'the Hospitals show page' do
 
     it 'displays name and the number of patients for each doctor' do
       within('#doctor-list') do
-        @grey.doctors.each do |doctor|
-          within("#doctor-#{doctor.id}") do
-            expect(page).to have_content(doctor.name)
-            expect(page).to have_content('Number of patients:')
-            # cant call patient count here...
-          end
+        # @grey.doctors.each do |doctor|
+        #   within("#doctor-#{doctor.id}") do
+        #     expect(page).to have_content(doctor.name)
+        #     expect(page).to have_content('Number of patients:') # cant call patient count here...
+        #   end
+        # end
+
+        within("#doctor-#{@meredith.id}") do
+          expect(@meredith.name).to appear_before('Number of patients: 4')
+        end
+
+        within("#doctor-#{@alex.id}") do
+          expect(@alex.name).to appear_before('Number of patients: 2')
         end
       end
     end
