@@ -15,7 +15,7 @@ Hospital.delete_all
 @seaside = Hospital.create!(name: 'Seaside Health & Wellness Center')
 
 # doctors
-@merideth = @grey.doctors.create!(name: 'Meredith Grey', specialty: 'General Surgery', university: 'Harvard University')
+@meredith = @grey.doctors.create!(name: 'Meredith Grey', specialty: 'General Surgery', university: 'Harvard University')
 @alex = @grey.doctors.create!(name: 'Alex Karev', specialty: 'Pediatric Surgery', university: 'Johns Hopkins University')
 @miranda = @grey.doctors.create!(name: 'Miranda Bailey', specialty: 'General Surgery', university: 'Stanford University')
 @derek = @grey.doctors.create!(name: 'Derek McDreamy Shepherd', specialty: 'Attending Surgeon', university: 'University of Pennsylvania')
@@ -33,10 +33,10 @@ Hospital.delete_all
 @zola = Patient.create!(name: 'Zola Shepherd', age: 2)
 
 # meredith's patients
-@doc_pat1 = DoctorPatient.create!(doctor: @merideth, patient: @katie)
-@doc_pat2 = DoctorPatient.create!(doctor: @merideth, patient: @denny)
-@doc_pat3 = DoctorPatient.create!(doctor: @merideth, patient: @rebecca)
-@doc_pat4 = DoctorPatient.create!(doctor: @merideth, patient: @zola)
+@doc_pat1 = DoctorPatient.create!(doctor: @meredith, patient: @katie)
+@doc_pat2 = DoctorPatient.create!(doctor: @meredith, patient: @denny)
+@doc_pat3 = DoctorPatient.create!(doctor: @meredith, patient: @rebecca)
+@doc_pat4 = DoctorPatient.create!(doctor: @meredith, patient: @zola)
 
 # miranda's patients
 @doc_pat5 = DoctorPatient.create!(doctor: @miranda, patient: @katie)
